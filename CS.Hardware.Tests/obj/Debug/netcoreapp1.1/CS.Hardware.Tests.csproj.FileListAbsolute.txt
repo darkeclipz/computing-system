@@ -1,0 +1,14 @@
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.Tests.deps.json
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.Tests.runtimeconfig.json
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.Tests.runtimeconfig.dev.json
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.Tests.dll
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.Tests.pdb
+D:\Repos\ComputingSystem\CS.Hardware.Tests\obj\Debug\netcoreapp1.1\CS.Hardware.Tests.csprojResolveAssemblyReference.cache
+D:\Repos\ComputingSystem\CS.Hardware.Tests\obj\Debug\netcoreapp1.1\CS.Hardware.Tests.AssemblyInfo.cs
+D:\Repos\ComputingSystem\CS.Hardware.Tests\obj\Debug\netcoreapp1.1\CS.Hardware.Tests.dll
+D:\Repos\ComputingSystem\CS.Hardware.Tests\obj\Debug\netcoreapp1.1\CS.Hardware.Tests.pdb
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.dll
+D:\Repos\ComputingSystem\CS.Hardware.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.pdb

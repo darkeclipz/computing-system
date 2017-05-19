@@ -1,0 +1,7 @@
+D:\Repos\ComputingSystem\CS.Hardware\bin\Debug\netcoreapp1.1\CS.Hardware.deps.json
+D:\Repos\ComputingSystem\CS.Hardware\bin\Debug\netcoreapp1.1\CS.Hardware.dll
+D:\Repos\ComputingSystem\CS.Hardware\bin\Debug\netcoreapp1.1\CS.Hardware.pdb
+D:\Repos\ComputingSystem\CS.Hardware\obj\Debug\netcoreapp1.1\CS.Hardware.csprojResolveAssemblyReference.cache
+D:\Repos\ComputingSystem\CS.Hardware\obj\Debug\netcoreapp1.1\CS.Hardware.AssemblyInfo.cs
+D:\Repos\ComputingSystem\CS.Hardware\obj\Debug\netcoreapp1.1\CS.Hardware.dll
+D:\Repos\ComputingSystem\CS.Hardware\obj\Debug\netcoreapp1.1\CS.Hardware.pdb
