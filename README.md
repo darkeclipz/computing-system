@@ -34,7 +34,7 @@ Below is a list with the current contents of the project.
 1. HalfAdder
 2. FullAdder
 3. Adder16
-4. Inc14
+4. Inc16
 5. ALU
 
 #### Sequential
