@@ -1,4 +1,4 @@
-#Computing System
+# Computing System
 This is a C# implementation of the book The Elements of Computing Systems by Noam Nisan & Shimon Schocken
 
 ## Setup
