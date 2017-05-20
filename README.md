@@ -38,7 +38,8 @@ Below is a list with the current contents of the project.
 5. ALU
 
 #### Sequential
-TBA
+1. Clock
+2. DFF
 
 ## Architecture
 TBA
