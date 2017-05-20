@@ -16,7 +16,7 @@ namespace CS.Hardware.BooleanArithmetic
             {
                 var halfAdder1 = new HalfAdder(A, B);
                 var halfAdder2 = new HalfAdder(halfAdder1.Sum, C);
-                var or = new Or(halfAdder1.Carry, halfAdder2.Carry);
+                var or = new Xor(halfAdder1.Carry, halfAdder2.Carry);
                 return or.Out;
             }
         }

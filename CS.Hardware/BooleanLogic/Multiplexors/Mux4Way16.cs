@@ -26,7 +26,7 @@ namespace CS.Hardware.BooleanLogic.Multiplexors
                 {
                     var and1 = new And(mux_1.Out[i], not.Out);
                     var and2 = new And(mux_2.Out[i], Sel[0]);
-                    var or = new Or(and1.Out, and2.Out);
+                    var or = new Xor(and1.Out, and2.Out);
                     @out[i] = or.Out;
                 }
                 return @out;

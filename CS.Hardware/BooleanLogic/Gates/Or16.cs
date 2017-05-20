@@ -17,7 +17,7 @@ namespace CS.Hardware.BooleanLogic.Gates
                 bool[] @out = new bool[SIZE];
                 for(int i = 0; i < SIZE; i++)
                 {
-                    var or = new Or(A[i], B[i]);
+                    var or = new Xor(A[i], B[i]);
                     @out[i] = or.Out;
                 }
                 return @out;

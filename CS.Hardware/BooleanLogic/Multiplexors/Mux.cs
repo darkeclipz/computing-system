@@ -17,7 +17,7 @@ namespace CS.Hardware.BooleanLogic.Multiplexors
                 var not = new Not(Sel);
                 var and1 = new And(A, not.Out);
                 var and2 = new And(B, Sel);
-                var or = new Or(and1.Out, and2.Out);
+                var or = new Xor(and1.Out, and2.Out);
                 return or.Out;
             }
         }
