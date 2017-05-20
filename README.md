@@ -1,7 +1,9 @@
 # Computing System
 This is a C# implementation of the book The Elements of Computing Systems by Noam Nisan & Shimon Schocken. Instead of grabbing a soldering iron, all the logic is done with C# implementations of logical gates to simulate it as much as possible. For this same reason, I also tried to minimize repetitive code. However, I want to make sure that any logic that is performed is only done by the logical building blocks that are created in the project.
 
-Also worth noting is that the clock speed is very low. It is estimated for 50 cycles per second. For the clock I am using a Timer which lowest tick speed is 1m/s. So the theoretical speed with the Timer is about 500 cycles per second. I wonder if it is worth it to implement any other mechanism because the Windows OS scheduler will &@#$ it up.
+Also worth noting is that the clock speed is very low. It is estimated for 50 cycles per second. For the clock I'm currently using a Timer, which lowest tick speed is 1m/s. So the theoretical speed with the Timer is about 500 cycles per second. I wonder if it is worth it to implement any other mechanism because the Windows OS scheduler will &@#$ it up.
+
+*Framework:* .NET Core
 
 ## Setup
 Currently only the hardware is working. It can be seen by cloning the project and running the tests. 
