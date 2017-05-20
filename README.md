@@ -40,6 +40,8 @@ Below is a list with the current contents of the project.
 #### Sequential
 1. Clock
 2. DFF
+3. Bit
+4. Register
 
 ## Architecture
 TBA
