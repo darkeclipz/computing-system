@@ -13,7 +13,7 @@ namespace CS.Hardware.Tests
         [TestMethod]
         public void DFF()
         {
-            var clock = new Clock(cycleTimeInMilliseconds: 10);
+            var clock = new Clock(cycleTimeInMilliseconds: 2);
             var dff = new DFF();
             clock.OnLow += dff.Tick;
             while (clock.Cycles < 1) ;
@@ -25,7 +25,7 @@ namespace CS.Hardware.Tests
         [TestMethod]
         public void Clock()
         {
-            var clock = new Clock(cycleTimeInMilliseconds: 10);
+            var clock = new Clock(cycleTimeInMilliseconds: 2);
             while (clock.Cycles < 1) ;
             Assert.IsFalse(clock.State);
             while (!clock.State) ;
@@ -36,7 +36,7 @@ namespace CS.Hardware.Tests
         [TestMethod]
         public void Bit()
         {
-            var clock = new Clock(cycleTimeInMilliseconds: 10);
+            var clock = new Clock(cycleTimeInMilliseconds: 2);
             var bit = new Bit();
             clock.OnLow += bit.Tick;
             bit.In = false;
@@ -50,6 +50,31 @@ namespace CS.Hardware.Tests
             bit.In = false;
             while (clock.Cycles < 3) ;
             Assert.IsTrue(bit.Out);
+        }
+
+        [TestMethod]
+        public void Register()
+        {
+            var size = 16;
+            var clock = new Clock(cycleTimeInMilliseconds: 2);
+            var register = new Register();
+            clock.OnLow += register.Tick;
+            while (clock.Cycles < 1) ;
+            var input = new bool[size];
+            for (int i = 0; i < size; i++)
+            {
+                input[i] = true;
+                Assert.IsFalse(register.Out[i]);
+            }
+            Assert.IsFalse(register.Load);
+            register.In = input;
+            register.Load = true;
+            while (clock.Cycles < 2) ;
+            for (int i = 0; i < size; i++)
+            {
+                Assert.IsTrue(register.Out[i]);
+            }
+            Assert.IsFalse(register.Load);
         }
     }
 }
