@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace CS.Hardware.Tests
@@ -84,15 +85,16 @@ namespace CS.Hardware.Tests
             var cycles = 0;
             void Tick(bool pulse)
             {
-                if(pulse)
+                if(!pulse)
                 {
                     cycles++;
                 }
             }
             var dffs = new List<DFF>();
             var size = 16384;
-            var clock = new Clock(2);
+            var clock = new Clock(2, 100);
             clock.OnHigh += Tick;
+            clock.OnLow += Tick;
             for(int i = 0; i < size; i++)
             {
                 var dff = new DFF();
