@@ -1,5 +1,7 @@
 # Computing System
-This is a C# implementation of the book The Elements of Computing Systems by Noam Nisan & Shimon Schocken. Instead of grabbing a soldering iron, all the logic is done with C# implementations of logical gates to simulate it as much as possible. And for the same reason I don't want to spend hours with a soldering iron, I also don't like repetetive code. This also has been fixed as much as possible with C#. However, all the logic that is performed is done with the hardware implementations.
+This is a C# implementation of the book The Elements of Computing Systems by Noam Nisan & Shimon Schocken. Instead of grabbing a soldering iron, all the logic is done with C# implementations of logical gates to simulate it as much as possible. For this same reason, I also tried to minimize repetitive code. However, I want to make sure that any logic that is performed is only done by the logical building blocks that are created in the project.
+
+Also worth noting is that the clock speed is very low. It is estimated for 50 cycles per second. For the clock I am using a Timer which lowest tick speed is 1 m/s. So the theoretical speed with the Timer is about 500 cycles per second. I also don't think it is worth it to implement any other mechanism because the Windows OS scheduler will &@#$ it up.
 
 ## Setup
 Currently only the hardware is working. It can be seen by cloning the project and running the tests. 
@@ -42,9 +44,20 @@ Below is a list with the current contents of the project.
 2. DFF
 3. Bit
 4. Register
+5. RAM8
+6. RAM64
+7. RAM512
+8. RAM4K
+9. RAM16K
+10. PC (16-bit counter)
 
 ## Architecture
-TBA
+1. CPU
+2. ROM32K
+3. Screen
+4. Keyboard
+5. Memory
+6. Computer
 
 ## Assembler
 TBA
