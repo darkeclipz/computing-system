@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CS.Hardware.BooleanLogic.Multiplexors
+namespace CS.Hardware.BooleanLogic.Multiplexers
 {
     public class Mux16
     {

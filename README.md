@@ -24,7 +24,7 @@ Below is a list with the current contents of the project.
 9. Or16
 10. Or8Way
 
-#### Multiplexors
+#### Multiplexers
 1. Mux
 2. Mux16
 3. Mux4Way16

@@ -1,4 +1,4 @@
-﻿using CS.Hardware.BooleanLogic.Multiplexors;
+﻿using CS.Hardware.BooleanLogic.Multiplexers;
 using System;
 using System.Collections.Generic;
 using System.Text;

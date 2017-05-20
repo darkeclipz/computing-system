@@ -1,4 +1,4 @@
-﻿using CS.Hardware.BooleanLogic.Multiplexors;
+﻿using CS.Hardware.BooleanLogic.Multiplexers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 namespace CS.Hardware.Tests
 {
     [TestClass]
-    public class Multiplexors
+    public class Multiplexers
     {
         [TestMethod]
         public void Mux()
