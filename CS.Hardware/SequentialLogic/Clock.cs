@@ -9,9 +9,11 @@ namespace CS.Hardware.SequentialLogic
     {
         private Timer _timer;
         private bool _pulse = true;
+        public bool State { get { return _pulse; } }
         public delegate void Pulse(bool pulse);
         public Pulse OnLow;
         public Pulse OnHigh;
+        public long Cycles { get; set; } = 0;
 
         public Clock(int cycleTimeInMilliseconds, int delay = 0)
         {
@@ -22,6 +24,11 @@ namespace CS.Hardware.SequentialLogic
         {
             _pulse = !_pulse;
             InvokeOnPulse(_pulse);
+
+            if (!_pulse)
+            {
+                Cycles++;
+            }
         }
 
         private void InvokeOnPulse(bool pulse)

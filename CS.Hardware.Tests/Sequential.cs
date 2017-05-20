@@ -13,120 +13,43 @@ namespace CS.Hardware.Tests
         [TestMethod]
         public void DFF()
         {
-            int cycle = 0;
-            void Tick(bool pulse)
-            {
-                if(pulse)
-                {
-                    cycle++;
-                }
-            }
-
             var clock = new Clock(cycleTimeInMilliseconds: 10);
             var dff = new DFF();
-            clock.OnHigh += Tick;
-            clock.OnHigh += dff.Tick;
-
-            while (cycle < 2) ;
+            clock.OnLow += dff.Tick;
+            while (clock.Cycles < 1) ;
             dff.In = true;
-            while (cycle < 3) ;
+            while (clock.Cycles < 2) ;
             Assert.IsTrue(dff.Out);
         }
 
         [TestMethod]
         public void Clock()
         {
-            int cycle = 0;
-            bool currentPulse = true;
-            void Tick(bool pulse)
-            {
-                if (pulse)
-                {
-                    cycle++;
-                }
-
-                currentPulse = pulse;
-            }
-
-            var clock = new Clock(cycleTimeInMilliseconds: 2);
-            clock.OnLow += Tick;
-            clock.OnHigh += Tick;
-            while (cycle < 2 && currentPulse) ;
-
-            while (cycle < 10)
-            {
-                Assert.IsFalse(currentPulse);
-                while (!currentPulse) ;
-                Assert.IsTrue(currentPulse);
-                while (currentPulse) ;
-            }
+            var clock = new Clock(cycleTimeInMilliseconds: 10);
+            while (clock.Cycles < 1) ;
+            Assert.IsFalse(clock.State);
+            while (!clock.State) ;
+            Assert.IsTrue(clock.State);
+            while (clock.State) ;
         }
 
         [TestMethod]
-        public void Clock100Cycles()
+        public void Bit()
         {
-            int cycle = 0;
-            void Tick(bool pulse)
-            {
-                if(pulse)
-                {
-                    cycle++;
-                }
-            }
-            var clock = new Clock(2);
-            clock.OnHigh += Tick;
-            while (cycle < 100) ;
-            Assert.IsTrue(true);
-        }
-
-        [TestMethod]
-        public void DFF64KCycleSpeed()
-        {
-            var cycles = 0;
-            void Tick(bool pulse)
-            {
-                if(!pulse)
-                {
-                    cycles++;
-                }
-            }
-            var dffs = new List<DFF>();
-            var size = 16384;
-            var clock = new Clock(2, 100);
-            clock.OnHigh += Tick;
-            clock.OnLow += Tick;
-            for(int i = 0; i < size; i++)
-            {
-                var dff = new DFF();
-                clock.OnHigh += dff.Tick;
-                dffs.Add(dff);
-            }
-            while (cycles < 10) ;
-            Assert.IsTrue(true);
-        }
-
-        [TestMethod]
-        public void DFF64KInitSpeed()
-        {
-            var cycles = 0;
-            void Tick(bool pulse)
-            {
-                if (pulse)
-                {
-                    cycles++;
-                }
-            }
-            var dffs = new List<DFF>();
-            var size = 16384;
-            var clock = new Clock(2);
-            clock.OnHigh += Tick;
-            for (int i = 0; i < size; i++)
-            {
-                var dff = new DFF();
-                clock.OnHigh += dff.Tick;
-                dffs.Add(dff);
-            }
-            Assert.IsTrue(true);
+            var clock = new Clock(cycleTimeInMilliseconds: 10);
+            var bit = new Bit();
+            clock.OnLow += bit.Tick;
+            bit.In = false;
+            while (clock.Cycles < 1) ;
+            Assert.IsFalse(bit.Out);
+            bit.In = true;
+            bit.Load = true;
+            while (clock.Cycles < 2) ;
+            Assert.IsTrue(bit.Out);
+            Assert.IsFalse(bit.Load);
+            bit.In = false;
+            while (clock.Cycles < 3) ;
+            Assert.IsTrue(bit.Out);
         }
     }
 }
