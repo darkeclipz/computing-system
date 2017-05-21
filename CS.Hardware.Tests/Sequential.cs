@@ -137,5 +137,116 @@ namespace CS.Hardware.Tests
             ram.SetAddress(address1);
             Assert.IsTrue(ram.Out[15]);
         }
+
+        [TestMethod]
+        public void RAM512_1()
+        {
+            var ram = new RAM512();
+            ram.In[0] = true;
+            ram.SetAddress(s1: true, s6: true, update: false);
+            ram.Load = true;
+            Assert.IsFalse(ram.Out[0]);
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[0]);
+            Assert.IsFalse(ram.Load);
+            ram.SetAddress(s1: false);
+            Assert.IsFalse(ram.Out[0]);
+        }
+
+        [TestMethod]
+        public void RAM512_2()
+        {
+            var ram = new RAM512();
+            var address1 = new bool[] { false, true, false, false, true, false, false, true, false };
+            var address2 = new bool[] { true, false, false, true, false, false, true, false, false };
+            ram.In[15] = true;
+            ram.SetAddress(address1, update: false);
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[15]);
+            ram.SetAddress(address2);
+            Assert.IsFalse(ram.Out[15]);
+            ram.In[15] = false;
+            ram.In[2] = true;
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[2]);
+            ram.SetAddress(address1);
+            Assert.IsTrue(ram.Out[15]);
+        }
+
+        [TestMethod]
+        public void RAM4K_1()
+        {
+            var ram = new RAM4K();
+            ram.In[0] = true;
+            ram.SetAddress(s1: true, s6: true, update: false);
+            ram.Load = true;
+            Assert.IsFalse(ram.Out[0]);
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[0]);
+            Assert.IsFalse(ram.Load);
+            ram.SetAddress(s1: false);
+            Assert.IsFalse(ram.Out[0]);
+        }
+
+        [TestMethod]
+        public void RAM4K_2()
+        {
+            var ram = new RAM4K();
+            var address1 = new bool[] { false, true, false, false, true, false, false, true, false, false, true, false };
+            var address2 = new bool[] { true, false, false, true, false, false, true, false, false, false, true, true };
+            ram.In[15] = true;
+            ram.SetAddress(address1, update: false);
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[15]);
+            ram.SetAddress(address2);
+            Assert.IsFalse(ram.Out[15]);
+            ram.In[15] = false;
+            ram.In[2] = true;
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[2]);
+            ram.SetAddress(address1);
+            Assert.IsTrue(ram.Out[15]);
+        }
+
+        [TestMethod]
+        public void RAM16K_1()
+        {
+            var ram = new RAM16K();
+            ram.In[0] = true;
+            ram.SetAddress(s1: true, s6: true, update: false);
+            ram.Load = true;
+            Assert.IsFalse(ram.Out[0]);
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[0]);
+            Assert.IsFalse(ram.Load);
+            ram.SetAddress(s1: false);
+            Assert.IsFalse(ram.Out[0]);
+        }
+
+        [TestMethod]
+        public void RAM16K_2()
+        {
+            var ram = new RAM16K();
+            var address1 = new bool[] { false, true, false, false, true, false, false, true, false, false, true, false, false, true };
+            var address2 = new bool[] { true, false, false, true, false, false, true, false, false, false, true, true, true, false };
+            ram.In[15] = true;
+            ram.SetAddress(address1, update: false);
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[15]);
+            ram.SetAddress(address2);
+            Assert.IsFalse(ram.Out[15]);
+            ram.In[15] = false;
+            ram.In[2] = true;
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[2]);
+            ram.SetAddress(address1);
+            Assert.IsTrue(ram.Out[15]);
+        }
     }
 }
