@@ -100,5 +100,42 @@ namespace CS.Hardware.Tests
                 Assert.IsFalse(ram.Out[i]);
             }
         }
+
+        [TestMethod]
+        public void RAM64_1()
+        {
+            var ram = new RAM64();
+            ram.In[0] = true;
+            ram.SetAddress(s1: true, s6: true, update: false);
+            ram.Load = true;
+            Assert.IsFalse(ram.Out[0]);
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[0]);
+            Assert.IsFalse(ram.Load);
+            ram.SetAddress(s1: false);
+            Assert.IsFalse(ram.Out[0]);
+        }
+
+        [TestMethod]
+        public void RAM64_2()
+        {
+            var ram = new RAM64();
+            var address1 = new bool[] { false, true, false, false, true, false };
+            var address2 = new bool[] { true, false, false, true, false, false };
+            ram.In[15] = true;
+            ram.SetAddress(address1, update: false);
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[15]);
+            ram.SetAddress(address2);
+            Assert.IsFalse(ram.Out[15]);
+            ram.In[15] = false;
+            ram.In[2] = true;
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            Assert.IsTrue(ram.Out[2]);
+            ram.SetAddress(address1);
+            Assert.IsTrue(ram.Out[15]);
+        }
     }
 }

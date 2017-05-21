@@ -10,7 +10,7 @@ namespace CS.Hardware.BooleanLogic.Multiplexers
         private const int SIZE = 16;
         public bool[] In { get; set; } = new bool[SIZE];
         public bool Sel { get; set; }
-#warning "For every call on the index it will re-iterate to calculate the current state, please optimize."
+
         public bool[] A
         {
             get
@@ -24,7 +24,7 @@ namespace CS.Hardware.BooleanLogic.Multiplexers
                 return @out;
             }
         }
-#warning "For every call on the index it will re-iterate to calculate the current state, please optimize."
+
         public bool[] B
         {
             get

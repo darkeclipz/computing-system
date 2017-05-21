@@ -9,7 +9,6 @@ namespace CS.Hardware.BooleanLogic.Gates
         private const int SIZE = 16;
         public bool[] A { get; set; } = new bool[SIZE];
         public bool[] B { get; set; } = new bool[SIZE];
-#warning "For every call on the index it will re-iterate to calculate the current state, please optimize."
         public bool[] Out
         {
             get

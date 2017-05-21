@@ -15,18 +15,22 @@ namespace CS.Hardware.SequentialLogic
         private List<Register> _registers;
         private Mux8Way16 _mux;
         private DMux8Way _dmux;
-        private Or8Way _or;
         private bool[] _address = new bool[SEL_SIZE];
-        public bool[] Address {  get { return _address; } }
-        public void SetAddress(bool s1 = false, bool s2 = false, bool s3 = false) => SetAddress(new bool[] { s1, s2, s3 });
-        public void SetAddress(bool[] address)
-        {
-            _address = address;
-            Update();
-        }
+        public bool[] Address { get { return _address; } }
         private bool[] _out = new bool[BITS];
         public bool[] Out { get { return _out; } }
         public bool[] In { get; set; } = new bool[BITS];
+
+        public void SetAddress(bool s1 = false, bool s2 = false, bool s3 = false, bool update = true) => SetAddress(new bool[] { s1, s2, s3 }, update);
+        public void SetAddress(bool[] address, bool update = true)
+        {
+            _address = address;
+
+            if(update)
+            {
+                Update();
+            }
+        }
 
         private void Update()
         {
@@ -44,6 +48,8 @@ namespace CS.Hardware.SequentialLogic
 
         public void Tick(bool pulse)
         {
+            if (!Load) return;
+
             _dmux.Sel = Address;
             _dmux.In = Load;
 
@@ -58,8 +64,11 @@ namespace CS.Hardware.SequentialLogic
 
             for(int i = 0; i < SIZE; i++)
             {
-                _registers[i].In = In;
-                _registers[i].Tick(pulse);
+                if(_registers[i].Load)
+                {
+                    _registers[i].In = In;
+                    _registers[i].Tick(pulse);
+                }
             }
 
             Update();
@@ -71,7 +80,6 @@ namespace CS.Hardware.SequentialLogic
             _mux = new Mux8Way16();
             _dmux = new DMux8Way();
             _registers = new List<Register>();
-            _or = new Or8Way();
             for(int i = 0; i < SIZE; i++)
             {
                 _registers.Add(new Register());
