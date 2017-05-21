@@ -211,5 +211,58 @@ namespace CS.Hardware.Tests
             dmux.Sel[2] = true;
             Assert.IsTrue(dmux.H[0]);
         }
+
+        [TestMethod]
+        public void DMux4Way()
+        {
+            var sel = new bool[2];
+            var dmux = new DMux4Way(@in: true, selector: sel);
+            Assert.IsTrue(dmux.A);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.D);
+            dmux.Sel[1] = true;
+            Assert.IsTrue(dmux.B);
+            Assert.IsFalse(dmux.A || dmux.C || dmux.D);
+            dmux.Sel[1] = false;
+            dmux.Sel[0] = true;
+            Assert.IsTrue(dmux.C);
+            Assert.IsFalse(dmux.A || dmux.B || dmux.D);
+            dmux.Sel[1] = true;
+            Assert.IsTrue(dmux.D);
+            Assert.IsFalse(dmux.A || dmux.B || dmux.C);
+        }
+
+        [TestMethod]
+        public void DMux8Way()
+        {
+            var sel = new bool[3];
+            var dmux = new DMux8Way(@in: true, selector: sel);
+            Assert.IsTrue(dmux.A);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.D || dmux.E || dmux.F || dmux.G || dmux.H);
+            dmux.Sel[2] = true;
+            Assert.IsTrue(dmux.B);
+            Assert.IsFalse(dmux.A || dmux.C || dmux.D || dmux.E || dmux.F || dmux.G || dmux.H);
+            dmux.Sel[2] = false;
+            dmux.Sel[1] = true;
+            Assert.IsTrue(dmux.C);
+            Assert.IsFalse(dmux.A || dmux.B || dmux.D || dmux.E || dmux.F || dmux.G || dmux.H);
+            dmux.Sel[2] = true;
+            Assert.IsTrue(dmux.D);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.A || dmux.E || dmux.F || dmux.G || dmux.H);
+            dmux.Sel[2] = false;
+            dmux.Sel[1] = false;
+            dmux.Sel[0] = true;
+            Assert.IsTrue(dmux.E);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.D || dmux.A || dmux.F || dmux.G || dmux.H);
+            dmux.Sel[2] = true;
+            Assert.IsTrue(dmux.F);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.D || dmux.E || dmux.A || dmux.G || dmux.H);
+            dmux.Sel[2] = false;
+            dmux.Sel[1] = true;
+            Assert.IsTrue(dmux.G);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.D || dmux.E || dmux.F || dmux.A || dmux.H);
+            dmux.Sel[2] = true;
+            Assert.IsTrue(dmux.H);
+            Assert.IsFalse(dmux.B || dmux.C || dmux.D || dmux.E || dmux.F || dmux.G || dmux.A);
+        }
      }
 }

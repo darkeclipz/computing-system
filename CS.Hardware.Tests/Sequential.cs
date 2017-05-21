@@ -76,5 +76,29 @@ namespace CS.Hardware.Tests
             }
             Assert.IsFalse(register.Load);
         }
+
+        [TestMethod]
+        public void RAM8()
+        {
+            var size = 16;
+            var ram = new RAM8();
+            for (int i = 0; i < size; i++)
+            {
+                ram.In[i] = true;
+                Assert.IsFalse(ram.Out[i]);
+            }
+            ram.Load = true;
+            ram.Tick(pulse: false);
+            for(int i = 0; i < size; i++)
+            {
+                Assert.IsTrue(ram.Out[i]);
+            }
+            Assert.IsFalse(ram.Load);
+            ram.SetAddress(s3: true);
+            for(int i = 0; i < size; i++)
+            {
+                Assert.IsFalse(ram.Out[i]);
+            }
+        }
     }
 }

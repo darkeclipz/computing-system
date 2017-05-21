@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS.Hardware.BooleanLogic.Multiplexers
 {
+    [Obsolete("Component should not be used.")]
     public class DMux4Way16
     {
         private const int SIZE = 16;

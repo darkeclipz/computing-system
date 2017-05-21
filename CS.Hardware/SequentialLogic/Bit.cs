@@ -11,7 +11,14 @@ namespace CS.Hardware.SequentialLogic
         private Mux _mux;
         public bool In { get; set; }
         public bool Load { get; set; }
-        public bool Out { get; private set; }
+        private bool _out;
+        public bool Out
+        {
+            get
+            {
+                return _out;
+            }
+        }
 
         public void Tick(bool pulse)
         {
@@ -20,7 +27,7 @@ namespace CS.Hardware.SequentialLogic
             _mux.Sel = Load;
             _dff.In = _mux.Out;
             _dff.Tick(pulse);
-            Out = _dff.Out;
+            _out = _dff.Out;
             Load = false;
         }
 

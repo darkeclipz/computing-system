@@ -54,6 +54,8 @@ Below is a list with the current contents of the project.
 10. PC (16-bit counter)
 
 ## Architecture
+_WIP_
+
 1. CPU
 2. ROM32K
 3. Screen
