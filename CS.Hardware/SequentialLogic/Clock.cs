@@ -5,6 +5,7 @@ using System.Threading;
 
 namespace CS.Hardware.SequentialLogic
 {
+    [Obsolete("This is not longer used, please use .Tick() to update at the end of the cycle.")]
     public class Clock
     {
         private Timer _timer;
