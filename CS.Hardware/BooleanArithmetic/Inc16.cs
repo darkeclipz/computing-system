@@ -6,6 +6,10 @@ namespace CS.Hardware.BooleanArithmetic
 {
     public class Inc16 : Adder16
     {
+        public Inc16()
+        {
+            C = true;
+        }
         public Inc16(bool[] a, bool[] b)
         {
             A = a;

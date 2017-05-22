@@ -248,5 +248,17 @@ namespace CS.Hardware.Tests
             ram.SetAddress(address1);
             Assert.IsTrue(ram.Out[15]);
         }
+
+        [TestMethod]
+        public void PC_1()
+        {
+            var pc = new PC();
+            pc.Tick();
+            Assert.IsFalse(pc.Out[0]);
+            pc.SetInc(increment: true);
+            pc.Tick();
+            Assert.IsTrue(pc.Inc);
+            Assert.IsTrue(pc.Out[0]);
+        }
     }
 }

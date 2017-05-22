@@ -1,0 +1,12 @@
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\CS.Assembler.Tests.deps.json
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\CS.Assembler.Tests.runtimeconfig.json
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\CS.Assembler.Tests.runtimeconfig.dev.json
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\CS.Assembler.Tests.dll
+D:\Repos\ComputingSystem\CS.Assembler.Tests\bin\Debug\netcoreapp1.1\CS.Assembler.Tests.pdb
+D:\Repos\ComputingSystem\CS.Assembler.Tests\obj\Debug\netcoreapp1.1\CS.Assembler.Tests.csprojResolveAssemblyReference.cache
+D:\Repos\ComputingSystem\CS.Assembler.Tests\obj\Debug\netcoreapp1.1\CS.Assembler.Tests.AssemblyInfo.cs
+D:\Repos\ComputingSystem\CS.Assembler.Tests\obj\Debug\netcoreapp1.1\CS.Assembler.Tests.dll
+D:\Repos\ComputingSystem\CS.Assembler.Tests\obj\Debug\netcoreapp1.1\CS.Assembler.Tests.pdb

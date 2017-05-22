@@ -1,0 +1,5 @@
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.Console.deps.json
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.Console.runtimeconfig.json
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.Console.runtimeconfig.dev.json
+D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\CS.Assembler.Console.csprojResolveAssemblyReference.cache
+D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\CS.Assembler.Console.AssemblyInfo.cs
