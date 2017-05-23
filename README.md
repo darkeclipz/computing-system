@@ -139,10 +139,10 @@ j1 (out < 0) | j2 (out = 0) | j3 (out > 0) | Mnemonic | Effect
 0 | 0 | 0 | `null` | No jump
 0 | 0 | 1 | `JGT` | If `out > 0` jump; `!NG & !ZR`
 0 | 1 | 0 | `JEQ` | If `out = 0` jump; `!NG & ZR`
-0 | 1 | 1 | `JGE` | If `out >= 0` jump; `!NG | ZR`
+0 | 1 | 1 | `JGE` | If `out >= 0` jump; `!NG \| ZR`
 1 | 0 | 0 | `JLT` | If `out < 0` jump; `NG & !ZR`
-1 | 0 | 1 | `JNE` | If `out != 0` jump; `NG | !ZR`
-1 | 1 | 0 | `JLE` | If `out <= ` jump; `NG | ZR`
+1 | 0 | 1 | `JNE` | If `out != 0` jump; `NG \| !ZR`
+1 | 1 | 0 | `JLE` | If `out <= ` jump; `NG \| ZR`
 1 | 1 | 1 | `JMP` | Jump
 
 ## Assembler
