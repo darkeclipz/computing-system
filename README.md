@@ -1,10 +1,6 @@
 # Computing System
 This is a C# implementation of the book The Elements of Computing Systems by Noam Nisan & Shimon Schocken. Instead of grabbing a soldering iron, all the logic is done with C# implementations of logical gates to simulate it as much as possible. For this same reason, I also tried to minimize repetitive code. However, I want to make sure that any logic that is performed is only done by the logical building blocks that are created in the project.
 
-Also worth noting is that the clock speed is very low. It is estimated for 50 cycles per second. For the clock I'm currently using a Timer, which lowest tick speed is 1m/s. So the theoretical speed with the Timer is about 500 cycles per second. I wonder if it is worth it to implement any other mechanism because the Windows OS scheduler will &@#$ it up.
-
-*Framework:* .NET Core
-
 ## Setup
 Currently only the hardware is working. It can be seen by cloning the project and running the tests. 
 
@@ -62,6 +58,24 @@ _WIP_
 4. Keyboard
 5. Memory
 6. Computer
+
+## Machine Language
+**A-instruction**
+Instruction `@value` causes the computer to store the specified value in the A register.
+
+Used for:
+- Constants
+- Memory manipulation
+- Jump instructions
+
+15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
+**0** | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x |
+
+Bit 15 indicates the A-instruction.
+
+**C-instruction**
+
+
 
 ## Assembler
 TBA

@@ -93,6 +93,8 @@ namespace CS.Hardware.BooleanArithmetic
             Execute();
         }
 
+        public ALU() { }
+
         public void Execute()
         {
             // Input stream of 16-bit for x

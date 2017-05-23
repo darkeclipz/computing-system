@@ -2266,6 +2266,13 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "CS.Hardware/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.2"
+        }
       }
     }
   },
@@ -7029,10 +7036,16 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "CS.Hardware/1.0.0": {
+      "type": "project",
+      "path": "../CS.Hardware/CS.Hardware.csproj",
+      "msbuildProject": "../CS.Hardware/CS.Hardware.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "CS.Hardware >= 1.0.0",
       "Microsoft.NETCore.App >= 1.1.2"
     ]
   },
@@ -7052,7 +7065,11 @@
       ],
       "frameworks": {
         "netcoreapp1.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Repos\\ComputingSystem\\CS.Hardware\\CS.Hardware.csproj": {
+              "projectPath": "D:\\Repos\\ComputingSystem\\CS.Hardware\\CS.Hardware.csproj"
+            }
+          }
         }
       }
     },
