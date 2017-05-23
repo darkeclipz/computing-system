@@ -153,6 +153,3 @@ TBA
 
 ## Operating System
 TBA
-
-# Author
-Created by Lars Rotgers, May 2017. (http://www.larsrotgers.nl)
