@@ -94,10 +94,50 @@ Computed function is specified by the `a`-bit and six `c`-bits.
 comp (a=0) | c1 | c2 | c3 | c4 | c5 | c6 | comp(a=1)
 --- | --- | --- | --- | --- | --- | --- | ---
 `0` | 1 | 0 | 1 | 0 | 1 | 0 | 
+`1` | 1 | 1 | 1 | 1 | 1 | 1 |
+`-1` | 1 | 1 | 1 | 0 | 1 | 0 |
+`D` | 0 | 0 | 1 | 1 | 0 | 0 |
+`A`| 1 | 1 | 0 | 0 | 0 | 0 | `M`
+`!D` | 0 | 0 | 1 | 1 | 0 | 1 |
+`!A` | 1 | 1 | 0 | 0 | 0 | 1 | `!M`
+`-D` | 0 | 0 | 1 | 1 | 1 | 1 |
+`-A` | 1 | 1 | 0 | 0 | 1 | 1 | `-M`
+`D+1` | 0 | 1 | 1 | 1 | 1 | 1 |
+`A+1` | 1 | 1 | 0 | 1 | 1 | 1 | `M+1`
+`D-1` | 0 | 0 | 1 | 1 | 1 | 0 | 
+`A-1` | 1 | 1 | 0 | 0 | 1 | 0 | `M-1`
+`D+A` | 0 | 0 | 0 | 0 | 1 | 0 | `D+M`
+`D-A` | 0 | 1 | 0 | 0 | 1 | 1 | `D-M`
+`A-D` | 0 | 0 | 0 | 1 | 1 | 1 | `M-D`
+`D&A` | 0 | 0 | 0 | 0 | 0 | 0 | `D&M`
+`D|A` | 0 | 1 | 0 | 1 | 0 | 1 | `D|M`
 
 **Dest**
 
+Stores the computed value.
+- `d1` in the A register
+- `d2` in the D register
+- `d3` in memory
+
+d1 | d2 | d3 | Mnemonic | Destination
+--- | --- | --- | --- | ---
+0 | 0 | 0 | `null` | Value is not stored
+0 | 0 | 1 | `M` | Memory[A] (memory register addressed by A)
+0 | 1 | 0 | `D` | D register
+0 | 1 | 1 | `MD` | Memory[A] and D register
+1 | 0 | 0 | `A` | A register
+1 | 0 | 1 | `AM` | A register and Memory[A]
+1 | 1 | 0 | `AD | A register and D register
+1 | 1 | 1 | A register, Memory[A], and D register
+
 **Jump**
+
+Change the PC to jump to another instruction.
+
+j1 (out < 0) | j2 (out = 0) | j3 (out > 0) | Mnemonic | Effect
+--- | --- | --- | --- | ---
+0 | 0 | 0 | `null` | No jump
+0 | 0 | 1 | `JGT` | If out > 0 jump
 
 ## Assembler
 TBA
