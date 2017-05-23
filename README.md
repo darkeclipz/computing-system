@@ -68,7 +68,7 @@ Instruction `@value` causes the computer to store the specified value in the A r
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- 
 **0** | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x
 
-Bit 15 indicates the A-instruction. `x` represents the value.
+Bit `15` indicates the A-instruction. `x` represents the value.
 
 Used for:
 - Constants
@@ -85,7 +85,7 @@ Instruction `dest=comp;jump` causes the computer to execute a computation.
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- 
 **1** | 1 | 1 | a | c1 | c2 | c3 | c4 | c5 | c6 | d1 | d2 | d3 | j1 | j2 | j3
 
-Bit 15 indicates the C-instruction. Bit 14 & 13 are not used and left at 1. 
+Bit `15` indicates the C-instruction. Bit `14` & `13` are not used and left at `1`. 
 
 **Comp**
 
@@ -110,7 +110,7 @@ comp (a=0) | c1 | c2 | c3 | c4 | c5 | c6 | comp(a=1)
 `D-A` | 0 | 1 | 0 | 0 | 1 | 1 | `D-M`
 `A-D` | 0 | 0 | 0 | 1 | 1 | 1 | `M-D`
 `D&A` | 0 | 0 | 0 | 0 | 0 | 0 | `D&M`
-`D\|A` | 0 | 1 | 0 | 1 | 0 | 1 | `D|M`
+`D\|A` | 0 | 1 | 0 | 1 | 0 | 1 | `D\|M`
 
 **Dest**
 
@@ -127,8 +127,8 @@ d1 | d2 | d3 | Mnemonic | Destination
 0 | 1 | 1 | `MD` | Memory[A] and D register
 1 | 0 | 0 | `A` | A register
 1 | 0 | 1 | `AM` | A register and Memory[A]
-1 | 1 | 0 | `AD | A register and D register
-1 | 1 | 1 | A register, Memory[A], and D register
+1 | 1 | 0 | `AD` | A register and D register
+1 | 1 | 1 | `AMD` |  A register, Memory[A], and D register
 
 **Jump**
 
@@ -137,7 +137,13 @@ Change the PC to jump to another instruction.
 j1 (out < 0) | j2 (out = 0) | j3 (out > 0) | Mnemonic | Effect
 --- | --- | --- | --- | ---
 0 | 0 | 0 | `null` | No jump
-0 | 0 | 1 | `JGT` | If out > 0 jump
+0 | 0 | 1 | `JGT` | If `out > 0` jump; `!NG & !ZR`
+0 | 1 | 0 | `JEQ` | If `out = 0` jump; `!NG & ZR`
+0 | 1 | 1 | `JGE` | If `out >= 0` jump; `!NG | ZR`
+1 | 0 | 0 | `JLT` | If `out < 0` jump; `NG & !ZR`
+1 | 0 | 1 | `JNE` | If `out != 0` jump; `NG | !ZR`
+1 | 1 | 0 | `JLE` | If `out <= ` jump; `NG | ZR`
+1 | 1 | 1 | `JMP` | Jump
 
 ## Assembler
 TBA
