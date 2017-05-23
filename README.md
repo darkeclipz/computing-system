@@ -77,7 +77,21 @@ Used for:
 
 **C-instruction**
 
+Instruction `dest=comp;jump` causes the computer to execute a computation.
+- if `dest` is empty, the `=` is omitted.
+- if `jump` is empty, the `;` is omitted. 
 
+15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- 
+**1** | 1 | 1 | a | c1 | c2 | c3 | c4 | c5 | c6 | d1 | d2 | d3 | j1 | j2 | j3
+
+Bit 15 indicates the C-instruction. Bit 14 & 13 are not used and left at 1. 
+
+**Comp**
+
+**Dest**
+
+**Jump**
 
 ## Assembler
 TBA
