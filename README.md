@@ -68,8 +68,8 @@ Used for:
 - Memory manipulation
 - Jump instructions
 
-15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
-**0** | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x |
+| 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| **0** | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x |
 
 Bit 15 indicates the A-instruction.
 
