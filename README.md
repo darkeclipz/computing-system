@@ -88,6 +88,11 @@ Instruction `dest=comp;jump` causes the computer to execute a computation.
 Bit 15 indicates the C-instruction. Bit 14 & 13 are not used and left at 1. 
 
 **Comp**
+Computed function is specified by the `a`-bit and six `c`-bits.
+
+comp (a=0) | c1 | c2 | c3 | c4 | c5 | c6 | comp(a=1)
+--- | --- | --- | --- | --- | --- | ---
+0 | 1 | 0 | 1 | 0 | 1 | 0 | 
 
 **Dest**
 
