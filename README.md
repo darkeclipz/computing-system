@@ -87,7 +87,7 @@ Instruction `dest=comp;jump` causes the computer to execute a computation.
 
 Bit `15` indicates the C-instruction. Bit `14` & `13` are not used and left at `1`. 
 
-**Comp**
+**Compute**
 
 Computed function is specified by the `a`-bit and six `c`-bits.
 
@@ -112,7 +112,7 @@ comp (a=0) | c1 | c2 | c3 | c4 | c5 | c6 | comp(a=1)
 `D&A` | 0 | 0 | 0 | 0 | 0 | 0 | `D&M`
 `D\|A` | 0 | 1 | 0 | 1 | 0 | 1 | `D\|M`
 
-**Dest**
+**Destination**
 
 Stores the computed value.
 - `d1` in the A register
@@ -137,12 +137,12 @@ Change the PC to jump to another instruction.
 j1 (out < 0) | j2 (out = 0) | j3 (out > 0) | Mnemonic | Effect
 --- | --- | --- | --- | ---
 0 | 0 | 0 | `null` | No jump
-0 | 0 | 1 | `JGT` | If `out > 0` jump; `!NG & !ZR`
-0 | 1 | 0 | `JEQ` | If `out = 0` jump; `!NG & ZR`
-0 | 1 | 1 | `JGE` | If `out >= 0` jump; `!NG \| ZR`
-1 | 0 | 0 | `JLT` | If `out < 0` jump; `NG & !ZR`
-1 | 0 | 1 | `JNE` | If `out != 0` jump; `NG \| !ZR`
-1 | 1 | 0 | `JLE` | If `out <= ` jump; `NG \| ZR`
+0 | 0 | 1 | `JGT` | If `out > 0` jump
+0 | 1 | 0 | `JEQ` | If `out = 0` jump
+0 | 1 | 1 | `JGE` | If `out >= 0` jump
+1 | 0 | 0 | `JLT` | If `out < 0` jump
+1 | 0 | 1 | `JNE` | If `out != 0` jump
+1 | 1 | 0 | `JLE` | If `out <= ` jump
 1 | 1 | 1 | `JMP` | Jump
 
 ## Assembler
