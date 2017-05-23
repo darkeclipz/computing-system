@@ -85,5 +85,14 @@ namespace CS.Hardware.SequentialLogic
                 _registers.Add(new Register());
             }
         }
+
+        //public List<Register> DebugRegister { get { return _registers; } }
+        public void ReadAllBlocks(ref int address, StringBuilder sb)
+        {
+            for (int i = 0; i < SIZE; i++)
+            {
+                _registers[i].ReadAllBlocks(ref address, sb);
+            }
+        }
     }
 }

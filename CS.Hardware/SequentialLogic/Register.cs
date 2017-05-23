@@ -33,5 +33,30 @@ namespace CS.Hardware.SequentialLogic
                 _bits.Add(new Bit());
             }
         }
+
+        public void ReadAllBlocks(ref int address, StringBuilder sb)
+        {
+            sb.Append($"{address.ToString().PadLeft(5, '0')}\t");
+            int sum = -1;
+            for(int i = 0; i < SIZE; i++)
+            {
+                if(i % 8 == 0 && i > 0)
+                {
+                    sb.Append("  ");
+                }
+                else if (i % 4 == 0 && i > 0)
+                {
+                    sb.Append(' ');
+                }
+
+                sb.Append(_bits[i].Out ? '1' : '0');
+                sum += (int)Math.Pow((_bits[i].Out ? 2 : 0), SIZE - i - 1);
+            }
+            sb.Append($"  (0x{sum.ToString("x").PadLeft(4, '0')})");
+            sb.Append(Environment.NewLine);
+            address++;
+        }
+
+        // public List<Bit> DebugBits { get { return _bits; } }
     }
 }

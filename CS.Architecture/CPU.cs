@@ -49,5 +49,10 @@ namespace CS.Architecture
         {
             throw new NotImplementedException();
         }
+
+        public Register DebugA { get { return _a; } }
+        public Register DebugD { get { return _d; } }
+        public ALU DebugAlu { get { return _alu; } }
+        public PC DebugPc{ get { return _pc; } }
     }
 }

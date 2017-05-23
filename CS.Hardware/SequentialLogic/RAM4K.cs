@@ -91,5 +91,14 @@ namespace CS.Hardware.SequentialLogic
                 _rams.Add(new RAM512());
             }
         }
+
+        //private List<RAM512> DebugRam { get { return _rams; } }
+        public void ReadAllBlocks(ref int address, StringBuilder sb)
+        {
+            for(int i = 0; i < SIZE; i++)
+            {
+                _rams[i].ReadAllBlocks(ref address, sb);
+            }
+        }
     }
 }

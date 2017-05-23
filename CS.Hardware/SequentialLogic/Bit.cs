@@ -36,5 +36,7 @@ namespace CS.Hardware.SequentialLogic
             _dff = new DFF();
             _mux = new Mux();
         }
+
+        // public DFF DebugDFF { get { return _dff; } }
     }
 }

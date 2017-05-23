@@ -5,3 +5,5 @@ D:\Repos\ComputingSystem\CS.Architecture\obj\Debug\netcoreapp1.1\CS.Architecture
 D:\Repos\ComputingSystem\CS.Architecture\obj\Debug\netcoreapp1.1\CS.Architecture.AssemblyInfo.cs
 D:\Repos\ComputingSystem\CS.Architecture\obj\Debug\netcoreapp1.1\CS.Architecture.dll
 D:\Repos\ComputingSystem\CS.Architecture\obj\Debug\netcoreapp1.1\CS.Architecture.pdb
+D:\Repos\ComputingSystem\CS.Architecture\bin\Debug\netcoreapp1.1\CS.Hardware.dll
+D:\Repos\ComputingSystem\CS.Architecture\bin\Debug\netcoreapp1.1\CS.Hardware.pdb

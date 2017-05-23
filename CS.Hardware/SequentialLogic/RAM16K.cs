@@ -86,5 +86,14 @@ namespace CS.Hardware.SequentialLogic
                 _rams.Add(new RAM4K());
             }
         }
+
+        public List<RAM4K> DebugRam { get { return _rams; } }
+        public void ReadAllBlocks(ref int address, StringBuilder sb)
+        {
+            for (int i = 0; i < SIZE; i++)
+            {
+                _rams[i].ReadAllBlocks(ref address, sb);
+            }
+        }
     }
 }

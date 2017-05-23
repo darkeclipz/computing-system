@@ -10,3 +10,7 @@ D:\Repos\ComputingSystem\CS.Architecture.Tests\obj\Debug\netcoreapp1.1\CS.Archit
 D:\Repos\ComputingSystem\CS.Architecture.Tests\obj\Debug\netcoreapp1.1\CS.Architecture.Tests.AssemblyInfo.cs
 D:\Repos\ComputingSystem\CS.Architecture.Tests\obj\Debug\netcoreapp1.1\CS.Architecture.Tests.dll
 D:\Repos\ComputingSystem\CS.Architecture.Tests\obj\Debug\netcoreapp1.1\CS.Architecture.Tests.pdb
+D:\Repos\ComputingSystem\CS.Architecture.Tests\bin\Debug\netcoreapp1.1\CS.Architecture.dll
+D:\Repos\ComputingSystem\CS.Architecture.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.dll
+D:\Repos\ComputingSystem\CS.Architecture.Tests\bin\Debug\netcoreapp1.1\CS.Architecture.pdb
+D:\Repos\ComputingSystem\CS.Architecture.Tests\bin\Debug\netcoreapp1.1\CS.Hardware.pdb
