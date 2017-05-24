@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CS.Hardware.SequentialLogic
+namespace CS.Architecture
 {
     public class ROM32K
     {

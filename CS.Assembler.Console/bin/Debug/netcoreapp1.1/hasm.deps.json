@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
-      "cs.assembler.app/1.0.0": {
+      "hasm/1.0.0": {
         "runtime": {
-          "CS.Assembler.App.dll": {}
+          "hasm.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "cs.assembler.app/1.0.0": {
+    "hasm/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

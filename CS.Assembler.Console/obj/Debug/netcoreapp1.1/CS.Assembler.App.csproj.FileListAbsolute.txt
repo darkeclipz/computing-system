@@ -1,9 +1,9 @@
-D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.App.deps.json
-D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.App.runtimeconfig.json
-D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.App.runtimeconfig.dev.json
-D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.App.dll
-D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\CS.Assembler.App.pdb
 D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\CS.Assembler.App.AssemblyInfo.cs
-D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\CS.Assembler.App.dll
-D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\CS.Assembler.App.pdb
 D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\CS.Assembler.App.csprojResolveAssemblyReference.cache
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\hasm.deps.json
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\hasm.dll
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\hasm.pdb
+D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\hasm.dll
+D:\Repos\ComputingSystem\CS.Assembler.Console\obj\Debug\netcoreapp1.1\hasm.pdb
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\hasm.runtimeconfig.json
+D:\Repos\ComputingSystem\CS.Assembler.Console\bin\Debug\netcoreapp1.1\hasm.runtimeconfig.dev.json
