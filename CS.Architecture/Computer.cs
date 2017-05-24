@@ -14,28 +14,36 @@ namespace CS.Architecture
         public bool Power { get; set; } = true;
         public bool Reset { get; set; }
 
-        public Computer()
+        public Computer(bool power = true)
         {
+            Power = power;
+
             Task.Run(new Action(() =>
             {
                 while (Power)
                 {
-                    _rom.Tick(false);
-
-                    // Pass CPU inputs...
-                    _cpu.Reset = Reset;
-                    _cpu.Tick(false);
-
-                    if (Reset)
-                    {
-                        Reset = false;
-                    }
-
-                    // Pass memory inputs...
-
-                    _memory.Tick(false);
+                    Tick(false);
                 }
             }));
+        }
+
+        public void Tick(bool pulse)
+        {
+            _rom.SetAddress(_cpu.PC, update: false);
+            _rom.Tick(false);
+
+            // Pass CPU inputs...
+            _cpu.Reset = Reset;
+            _cpu.Instruction = _rom.Out;
+            _cpu.Tick(false);
+
+            if (Reset)
+            {
+                Reset = false;
+            }
+
+            // Pass memory inputs...
+            _memory.Tick(false);
         }
 
         public string ToJson()
@@ -53,6 +61,19 @@ namespace CS.Architecture
             int i = 0;
             _memory.ReadAllBlocks(ref i, sb);
             return sb.ToString();
+        }
+
+        public string RomToString()
+        {
+            var sb = new StringBuilder();
+            int i = 0;
+            _rom.ReadAllBlocks(ref i, sb);
+            return sb.ToString();
+        }
+
+        public void WriteToRom(bool[] address, bool[] data)
+        {
+            _rom.Write(address, data);
         }
     }
 }

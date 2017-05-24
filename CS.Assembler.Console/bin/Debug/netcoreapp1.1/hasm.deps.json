@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "hasm/1.0.0": {
+        "dependencies": {
+          "CS.Assembler": "1.0.0"
+        },
         "runtime": {
           "hasm.dll": {}
+        }
+      },
+      "cs.assembler/1.0.0": {
+        "runtime": {
+          "CS.Assembler.dll": {}
         }
       }
     }
   },
   "libraries": {
     "hasm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "cs.assembler/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

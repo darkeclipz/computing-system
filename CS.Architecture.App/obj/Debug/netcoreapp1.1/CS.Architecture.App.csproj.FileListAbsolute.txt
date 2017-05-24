@@ -1,0 +1,13 @@
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.App.deps.json
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.App.runtimeconfig.json
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.App.runtimeconfig.dev.json
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.App.dll
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.App.pdb
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.dll
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Hardware.dll
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Architecture.pdb
+D:\Repos\ComputingSystem\CS.Architecture.App\bin\Debug\netcoreapp1.1\CS.Hardware.pdb
+D:\Repos\ComputingSystem\CS.Architecture.App\obj\Debug\netcoreapp1.1\CS.Architecture.App.csprojResolveAssemblyReference.cache
+D:\Repos\ComputingSystem\CS.Architecture.App\obj\Debug\netcoreapp1.1\CS.Architecture.App.AssemblyInfo.cs
+D:\Repos\ComputingSystem\CS.Architecture.App\obj\Debug\netcoreapp1.1\CS.Architecture.App.dll
+D:\Repos\ComputingSystem\CS.Architecture.App\obj\Debug\netcoreapp1.1\CS.Architecture.App.pdb

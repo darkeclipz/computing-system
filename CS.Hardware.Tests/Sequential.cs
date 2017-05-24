@@ -254,11 +254,11 @@ namespace CS.Hardware.Tests
         {
             var pc = new PC();
             pc.Tick();
-            Assert.IsFalse(pc.Out[0]);
+            Assert.IsFalse(pc.Out[15]);
             pc.SetInc(increment: true);
             pc.Tick();
             Assert.IsTrue(pc.Inc);
-            Assert.IsTrue(pc.Out[0]);
+            Assert.IsTrue(pc.Out[15]);
         }
     }
 }

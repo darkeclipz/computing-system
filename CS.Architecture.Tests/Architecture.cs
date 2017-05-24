@@ -28,5 +28,17 @@ namespace CS.Architecture.Tests
             Assert.IsTrue(true);
             File.WriteAllText(@"C:\Test\Computer.Memory.txt", computer.MemoryToString());
         }
+
+        [TestMethod]
+        public void ROM32K()
+        {
+            var rom = new ROM32K();
+            Assert.IsTrue(rom != null);
+            var data = new bool[16];
+            data[15] = true;
+            rom.Write(new bool[15], data);
+            rom.SetAddress(new bool[15]);
+            Assert.IsTrue(rom.Out[15]);
+        }
     }
 }

@@ -35,19 +35,25 @@ namespace CS.Architecture
             FetchNext();
         }
 
-        private void FetchNext()
+        private void Decode()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void Execute()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        private void Decode()
+        private void FetchNext()
         {
-            throw new NotImplementedException();
+            _pc.Tick(false);
+            PC = _pc.Out;
+        }
+
+        public CPU()
+        {
+            _pc.SetInc(true);
         }
 
         public Register DebugA { get { return _a; } }
