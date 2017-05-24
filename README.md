@@ -1,8 +1,8 @@
 # Computing System
 This is a C# implementation of the book The Elements of Computing Systems by Noam Nisan & Shimon Schocken. Instead of grabbing a soldering iron, all the logic is done with C# implementations of logical gates to simulate it as much as possible.
 
-## Setup
-Currently only the hardware is working. It can be seen by cloning the project and running the tests. 
+## Run
+Start the .NET core console application in project _CS.Architecture.App_.
 
 ## Contents
 Below is a list with the current contents of the project.
